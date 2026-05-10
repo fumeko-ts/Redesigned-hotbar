@@ -1,24 +1,24 @@
 {
   "format_version": 2,
   "header": {
-    "uuid": "9d24861e-2e25-4605-bd16-78f6febffb23",
-    "name": "redesigned hotbar",
-    "description": "§6§l!",
+    "name": "Redesigned hotbar",
+    "description": "§s§ldiscord.gg/sFnE7zv75t§r§h \nThis pack remakes the hotbar to look better?\nCreator: ashura_temps",
+    "uuid": "382e7d2a-a1f5-4d47-9f6f-21250e108089",
     "version": [1, 0, 0],
-    "min_engine_version": [1, 21, 100]
+    "min_engine_version": [ 1, 26, 10 ]
   },
   "modules": [
     {
-      "uuid": "afaad41b-59e0-4d46-af56-1689d131f5d4",
+      "uuid": "4fac3a72-e872-4b55-8d9a-4d0f3c78dc49",
       "type": "resources",
-      "description": "",
+      "description": "by ashura_temps/ashura_tepes",
       "version": [1, 0, 0]
     }
   ],
   "pack_id": [
     // index 1, index 2
-    "9d24861e-2e25-4605-bd16-78f6febffb23",
-    "afaad41b-59e0-4d46-af56-1689d131f5d4"
+    "382e7d2a-a1f5-4d47-9f6f-21250e108089",
+    "4fac3a72-e872-4b55-8d9a-4d0f3c78dc49"
   ],
   "subpacks": [
     { "folder_name": "red", "name": "§lred§r", "memory_tier": 1 },
@@ -32,7 +32,12 @@
     { "folder_name": "pink", "name": "§lpink§r", "memory_tier": 9 }
   ],
   "metadata": {
-    "pixle-art": "ashura_temps/ashura_tepes",
-    "coded-by": "ashura_temps/ashura_tepes"
-  }
+    "authors": [
+      // texture creator and code developer
+      "Ashura_temps/ashura_tepes",
+      "https://www.planetminecraft.com/member/ashura_tepes/",
+      "https://www.curseforge.com/members/ashura_tepes/projects"
+    ]
+  },
+  "capabilities": ["pbr"]
 }
