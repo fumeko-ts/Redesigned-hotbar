@@ -18,12 +18,8 @@
     "type": "image",
     "uv_size": [20, 26],
     "size": [20, 26],
-    "texture": "custom/redesigned_hotbar_sprite_sheet.png",
-    "$item_collection_name|default": "$hotbar_collection_name",
-    "$stack_count_required|default": true,
-    "$durability_bar_required|default": true,
-    "$storage_bar_required|default": true,
     "$grid_index|default": 0,
+    "texture": "custom/redesigned_hotbar_sprite_sheet.png",
     "controls": [
       {
         "gui_hotbar_grid_item": {
@@ -69,7 +65,7 @@
                 "anchor_from": "center",
                 "anchor_to": "center",
                 "size": [18, 18],
-                "offset": [0.2, -1], // i would really prefer not to do a 0.2 offset(because it will look diffrent on all screen sizes)
+                "offset": [0.2, -1],
                 "controls": [
                   {
                     "renderer_holder": {
@@ -138,8 +134,65 @@
                       ]
                     }
                   },
-                  {"item_durability@hud.item_durability": {"layer": 7}},
-                  {"item_storage@hud.item_storage"  : {"layer": 7}}
+                  {
+                    "item_durability@custom_hotbars.progress_bar": {
+                      "property_bag": {
+                        "drop_shadow": true,
+                        "is_durability": true,
+                        "round_value": true
+                      },
+                      "bindings": [
+                        {
+                          "binding_name": "#item_durability_visible",
+                          "binding_name_override": "#touch_progress_bar_visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        },
+                        {
+                          "binding_name": "#item_durability_total_amount",
+                          "binding_name_override": "#progress_bar_total_amount",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        },
+                        {
+                          "binding_name": "#item_durability_current_amount",
+                          "binding_name_override": "#progress_bar_current_amount",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "item_storage@custom_hotbars.progress_bar": {
+                      "primary_color": [0.4, 0.4, 1.0, 1.0],
+                      "full_storage_color": [1.0, 0.4, 0.4],
+                      "property_bag": {
+                        "drop_shadow": true,
+                        "is_storage_bar": true
+                      },
+                      "bindings": [
+                        {
+                          "binding_name": "#item_storage_visible",
+                          "binding_name_override": "#progress_bar_visible",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        },
+                        {
+                          "binding_name": "#item_storage_total_amount",
+                          "binding_name_override": "#progress_bar_total_amount",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        },
+                        {
+                          "binding_name": "#item_storage_current_amount",
+                          "binding_name_override": "#progress_bar_current_amount",
+                          "binding_type": "collection",
+                          "binding_collection_name": "$item_collection_name"
+                        }
+                      ]
+                    }
+                  }
                 ]
               }
             },
@@ -165,6 +218,7 @@
                     "mapping_type": "pressed"
                   }
                 ],
+                "size": [20, 26],
                 "bindings": [
                   {
                     "binding_collection_name": "$hotbar_collection_name",
@@ -178,7 +232,6 @@
       }
     ],
     "bindings": [
-      {"binding_name": "#hotbar_visible"},
       {
         "binding_type": "collection_details",
         "binding_collection_name": "$hotbar_collection_name",
@@ -187,18 +240,31 @@
       {
         "binding_type": "view",
         "binding_condition": "always",
-        "source_property_name": "(#hotbar_visible and (#collection_index = $grid_index))",
+        "source_property_name": "(#collection_index = $grid_index)",
         "target_property_name": "#visible"
       }
     ]
   },
-  "section@global.empty_panel": {
+  "section": {
+    "type": "panel",
     "size": [20, 26],
+    "$item_collection_name|default": "$hotbar_collection_name",
+    "$stack_count_required|default": true,
+    "$durability_bar_required|default": true,
+    "$storage_bar_required|default": true,
     "controls": [
       {
-        "cooldown_renderer@hud.cooldown_renderer": {
-          "size": [20, 18],
-          "layer": 10
+        "cooldown_renderer": {
+          "type": "custom",
+          "renderer": "hotbar_cooldown_renderer",
+          "size": [20, 22],
+          "layer": 10,
+          "bindings": [
+            {
+              "binding_collection_name": "hotbar_items",
+              "binding_type": "collection_details"
+            }
+          ]
         }
       },
       { "section_0@custom_hotbars.section_template": { "$grid_index": 0, "uv": [2, 0] } },
@@ -211,6 +277,13 @@
       { "section_7@custom_hotbars.section_template": { "$grid_index": 7, "uv": [142, 0] } },
       { "section_8@custom_hotbars.section_template": { "$grid_index": 8, "uv": [162, 0] } }
     ]
+  },
+  "progress_bar": {
+    "type": "custom",
+    "renderer": "progress_bar_renderer",
+    "offset": [0, 5],
+    "size": [12, 1],
+    "layer": 7
   },
   "button_sprite_template": {
     "type": "image",

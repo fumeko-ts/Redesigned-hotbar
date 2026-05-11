@@ -31,9 +31,9 @@
               "left_stack_and_spacer_1": {
                 "type": "stack_panel",
                 "orientation": "horizontal",
-                "size": [27, 26],
+                "size": [25, 26],
                 "controls": [
-                  { "spacer_1": { "type": "panel", "size": [4, 26] } },
+                  { "spacer_1": { "type": "panel", "size": [2, 26] } },
                   {
                     "left_stack": {
                       "type": "stack_panel",
@@ -41,7 +41,7 @@
                       "size": [23, 26],
                       "controls": [
                         { "filler_1": { "type": "panel", "size": [23, "fill"] } },
-                        { "left@hud.custom_inventory_button_right": {} },
+                        { "left@custom_hotbars.inventory_button": {} },
                         { "filler_2": { "type": "panel", "size": [23, "fill"] } }
                       ]
                     }
@@ -95,7 +95,7 @@
                       "size": [23, 26],
                       "controls": [
                         { "filler_3": { "type": "panel", "size": [23, "fill"] } },
-                        { "right@hud.custom_inventory_button_right": {} },
+                        { "right@custom_hotbars.inventory_button": {} },
                         { "filler_4": { "type": "panel", "size": [23, "fill"] } }
                       ]
                     }
@@ -114,9 +114,6 @@
         }
       }
     ]
-  },
-  "custom_inventory_button_right@custom_hotbars.inventory_button": {
-    "offset": [5, 0]
   },
   //ngl no clue what the below actualy offsets but seems to work for me so im just going to roll with it
   //if eanyone knows a better way feel free to inform me i would love to know
