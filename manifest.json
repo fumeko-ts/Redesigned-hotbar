@@ -5,7 +5,7 @@
     "description": "§s§ldiscord.gg/sFnE7zv75t§r§h \nThis pack remakes the hotbar to look better?\nCreator: ashura_temps",
     "uuid": "382e7d2a-a1f5-4d47-9f6f-21250e108089",
     "version": [1, 0, 0],
-    "min_engine_version": [ 1, 26, 10 ]
+    "min_engine_version": [1, 26, 10]
   },
   "modules": [
     {
@@ -21,15 +21,16 @@
     "4fac3a72-e872-4b55-8d9a-4d0f3c78dc49"
   ],
   "subpacks": [
-    { "folder_name": "red", "name": "§lred§r", "memory_tier": 1 },
-    { "folder_name": "blue", "name": "§lblue§r", "memory_tier": 2 },
-    { "folder_name": "magenta", "name": "§lmagenta§r", "memory_tier": 3 },
-    { "folder_name": "dark_green", "name": "§ldark green§r", "memory_tier": 4 },
-    { "folder_name": "gold", "name": "§lgold§r", "memory_tier": 5 },
-    { "folder_name": "purpleish_blue", "name": "§lpurpleish blue?§r", "memory_tier": 6 },
-    { "folder_name": "light_green", "name": "§llight green§r", "memory_tier": 7 },
-    { "folder_name": "ocean_color", "name": "§locean color? maybe§r", "memory_tier": 8 },
-    { "folder_name": "pink", "name": "§lpink§r", "memory_tier": 9 }
+    { "folder_name": "mayonnaise"     , "name": "§cM§6a§ey§ao§bn§9n§da§5i§cs§6e" , "memory_tier": 1  },
+    { "folder_name": "blue"           , "name": "§lblue§r"                       , "memory_tier": 2  },
+    { "folder_name": "magenta"        , "name": "§lmagenta§r"                    , "memory_tier": 3  },
+    { "folder_name": "dark_green"     , "name": "§ldark green§r"                 , "memory_tier": 4  },
+    { "folder_name": "gold"           , "name": "§lgold§r"                       , "memory_tier": 5  },
+    { "folder_name": "pink"           , "name": "§lpink§r"                       , "memory_tier": 6  },
+    { "folder_name": "light_green"    , "name": "§llight green§r"                , "memory_tier": 7  },
+    { "folder_name": "ocean_color"    , "name": "§locean color? maybe§r"         , "memory_tier": 8  },
+    { "folder_name": "red"            , "name": "§lred§r"                        , "memory_tier": 9  },
+    { "folder_name": "purpleish_blue" , "name": "§lpurpleish blue?§r"            , "memory_tier": 10 }
   ],
   "metadata": {
     "authors": [
