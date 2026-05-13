@@ -33,7 +33,6 @@
                 "orientation": "horizontal",
                 "size": [25, 26],
                 "controls": [
-                  { "spacer_1": { "type": "panel", "size": [2, 26] } },
                   {
                     "left_stack": {
                       "type": "stack_panel",
@@ -45,7 +44,8 @@
                         { "filler_2": { "type": "panel", "size": [23, "fill"] } }
                       ]
                     }
-                  }
+                  },
+                  { "spacer_1": { "type": "panel", "size": [2, 26] } }
                 ],
                 "bindings": [
                   {
@@ -110,6 +110,12 @@
                 ]
               }
             }
+          ],
+          "bindings": [
+            {
+              "binding_name": "#hotbar_visible",
+              "binding_name_override": "#visible"
+            }
           ]
         }
       }
@@ -120,4 +126,6 @@
   "root_panel/exp_rend_resizable": { "offset": [0, -17] },
   "root_panel/exp_rend": { "offset": [0, -17] },
   "root_panel/centered_gui_elements_at_bottom_middle": { "offset": [0, -3] }
+  // ,
+  // "root_panel/centered_gui_elements_at_bottom_middle_touch": { "offset": [0, -3] }
 }

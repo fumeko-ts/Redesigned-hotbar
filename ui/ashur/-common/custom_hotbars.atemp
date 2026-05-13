@@ -50,8 +50,8 @@
                     "underlay": {
                       "type": "image",
                       "size": [24, 24],
-                      "uv": [76, 26],
                       "layer": 2,
+                      "uv": [230, 0],
                       "uv_size": [24, 24],
                       "texture": "custom/redesigned_hotbar_sprite_sheet.png"
                     }
@@ -118,6 +118,7 @@
                   {
                     "stack_count_label@common.stack_count_label": {
                       "layer": 6,
+                      "shadow": false,
                       "$stack_count_collection_name": "$hotbar_collection_name",
                       "bindings": [
                         {
@@ -257,7 +258,7 @@
         "cooldown_renderer": {
           "type": "custom",
           "renderer": "hotbar_cooldown_renderer",
-          "size": [20, 22],
+          "size": [20, 18],
           "layer": 10,
           "bindings": [
             {
@@ -317,14 +318,6 @@
             { "default@custom_hotbars.button_sprite_template": { "uv": [184, 0] } },
             { "pressed@custom_hotbars.button_sprite_template": {} },
             { "hover@custom_hotbars.button_sprite_template": {} }
-          ],
-          "bindings": [
-            {
-              "ignored": true,
-              "binding_name": "#inventory_touch_button",
-              "binding_name_override": "#visible",
-              "binding_type": "global"
-            }
           ]
         }
       }
